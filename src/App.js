@@ -15,11 +15,11 @@ function App() {
 
   useEffect(() => {
     async function fetchTodo() {
-      const url = `/.netlify/functions/todo?id=${todoId}`;
+      const url = `/.netlify/functions?id=${todoId}`;
       try {
-        const todo = await fetch(url);
+        const todo = await fetch(url).then(response => response.json());
         console.log(todo);
-        // setTodo(todo.title);
+        setTodo(todo.title);
       } catch (err) {
         console.log(err);
       }
