@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     async function fetchTodo() {
-      const url = `/.netlify/functions?id=${todoId}`;
+      const url = `/.netlify/functions/todo?id=${todoId}`;
       try {
         const todo = await fetch(url).then(response => response.json());
         console.log(todo);
