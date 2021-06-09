@@ -19,7 +19,7 @@ function App() {
       try {
         const todo = await fetch(url).then(response => response.json());
         console.log(todo);
-        setTodo(todo.title);
+        setTodo(todo.todo);
       } catch (err) {
         console.log(err);
       }
