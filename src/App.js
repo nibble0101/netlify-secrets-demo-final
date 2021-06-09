@@ -17,9 +17,9 @@ function App() {
     async function fetchTodo() {
       const url = `/.netlify/functions/todo?id=${todoId}`;
       try {
-        const todo = await fetch(url).then((res) => res.json());
+        const todo = await fetch(url);
         console.log(todo);
-        setTodo(todo.title);
+        // setTodo(todo.title);
       } catch (err) {
         console.log(err);
       }
