@@ -1,4 +1,4 @@
-exports.handler = async function(event, context) {
-   console.log(event);
-   return {status: 200, todo: "Hello world!"};
-}
+exports.handler = async function (event, context) {
+  console.log(event);
+  return { statusCode: 200, body: JSON.stringify({ todo: "Hello world!" }) };
+};
